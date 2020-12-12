@@ -5,8 +5,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t RudiSpaans/docker-react -f Dockerfile.dev .
+  - docker build -t rudispaans/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true -t RudiSpaans/docker-react npm run test
+  - docker run -e CI=true rudispaans/docker-react npm run test
 
